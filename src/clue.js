@@ -2,27 +2,147 @@
 
 // Suspects Array
 
-const suspectsArray = [];
+const suspectsArray = [
+  {
+    pseudo: "mrGreen",
+    firstName: "Jacob",
+    lastName: "Green",
+    occupation: "Entrepreneur",
+    age: 45,
+    description: "He has a lot of connections",
+    image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+    color: "green"
+  },
+
+  {
+    pseudo: "drOrchid",
+    firstName: "Doctor",
+    lastName: "Orchid",
+    occupation: "Scientist",
+    age: 26,
+    description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+    image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+    color: "white"
+  },
+
+  {
+    pseudo: "profPlum",
+    firstName: "Victor",
+    lastName: "Plum",
+    occupation: "Designer",
+    age: 22,
+    description: "Billionaire video game designer",
+    image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
+    color: "purple"
+  },
+  {
+    pseudo: "missScarlet",
+    firstName: "Kasandra",
+    lastName: "Scarlet",
+    occupation: "Actor",
+    age: 31,
+    description: "She is an A-list movie star with a dark past",
+    image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
+    color: "red"
+  },
+  {
+    pseudo: "mrsPeacock",
+    firstName: "Eleanor",
+    lastName: "Peacock",
+    occupation: "Socialité",
+    age: 36,
+    description: "She is from a wealthy family and uses her status and money to earn popularity",
+    image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+    color: blue
+  },
+  {
+    pseudo: "mrMustard",
+    firstName: "Jack",
+    lastName: "Mustard",
+    occupation: "Retired Football player",
+    age: 62,
+    description: "He is a former football player who tries to get by on his former glory",
+    image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
+    color: "yellow"
+  }
+
+]
 
 // Rooms Array
 
-const roomsArray = [];
+const roomsArray = [
+  {
+    name: "rope",
+    weight: 10
+  },
+  {
+    name: "knife",
+    weight: 8
+  },
+  {
+    name: "candlestick",
+    weight: 2
+  },
+  {
+    name: "bat",
+    weight: 13
+  },
+  { name: "trophy",
+   weight: 25 },
+  { name: "pistol",
+   weight: 20 }
+];
 
 // Weapons Array
 
-const weaponsArray = [];
+const weaponsArray = [
+  {name: "Dining Room"},
+  {name: "Conservatory"},
+  {name: "Kitchen"},
+  {name: "Study"},
+  {name: "Library"},
+  {name: "Billiard Room"},
+  {name: "Lounge"},
+  {name: "Ballroom"},
+  {name: "Hall"},
+  {name: "Spa"},
+  {name: "Living Room"},
+  {name: "Observatory"},
+  {name: "Theater"},
+  {name: "Guest House"},
+  {name: "Patio"}
+
+
+
+
+];
 
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom() {
 
-function pickMystery() {}
+let person=Math.floor(Math.random() * suspectsArray.length )-1;
+let room=Math.floor(Math.random() * roomsArray.length)-1;
+let weapon=Math.floor(Math.random() * weaponsArray.length)-1;
+
+
+
+return [suspectsArray[person],,weaponsArray[weapon],roomsArray[room]];
+
+
+
+}
+
+function pickMystery() {
+selectRandom(obj);
+console.log(obj[0]["firstName"]+obj[0]["firstName"]+ "killed Mr. Bod0dy using the"+ obj[1]["name"]+" in the"+ obj[2]["name"])
+
+ }
 
 
 // ITERATION 3
 
-function revealMystery() {}
 
 
 
