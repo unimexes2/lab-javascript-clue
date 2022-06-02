@@ -158,8 +158,6 @@ return({suspect,weapon, room})
 // ITERATION 3
 
 function revealMystery(obj){
-
-let str1= "Victor Plum killed Mr. Boddy using the poison in the Billiard Room!"
   let str= obj.suspect.firstName+" "+obj.suspect.lastName+" killed Mr. Boddy using the "+obj.weapon.name+" in the "+obj.room.name+"!"
 return str;
   
