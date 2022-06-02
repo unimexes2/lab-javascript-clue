@@ -53,7 +53,7 @@ const suspectsArray = [
     age: 36,
     description: "She is from a wealthy family and uses her status and money to earn popularity",
     image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
-    color: blue
+    color: "blue"
   },
   {
     pseudo: "mrMustard",
@@ -70,8 +70,12 @@ const suspectsArray = [
 
 // Rooms Array
 
-const roomsArray = [
-  {
+const weaponsArray  = [
+  
+  
+
+{name: "dumbbell", weight: 30 }, 
+{
     name: "rope",
     weight: 10
   },
@@ -89,13 +93,19 @@ const roomsArray = [
   },
   { name: "trophy",
    weight: 25 },
+
   { name: "pistol",
-   weight: 20 }
-];
+   weight: 20 },
+   {name:"poison",
+   weight: 2},
+   {name: "axe",
+    weight: 15}
+   
+  ];
 
 // Weapons Array
 
-const weaponsArray = [
+const roomsArray= [
   {name: "Dining Room"},
   {name: "Conservatory"},
   {name: "Kitchen"},
@@ -120,30 +130,43 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {
+function selectRandom(arr) {
+if(arr==undefined||arr.length==0){return undefined}
+let variable=Math.floor(Math.random() * arr.length );
 
-let person=Math.floor(Math.random() * suspectsArray.length )-1;
-let room=Math.floor(Math.random() * roomsArray.length)-1;
-let weapon=Math.floor(Math.random() * weaponsArray.length)-1;
-
-
-
-return [suspectsArray[person],,weaponsArray[weapon],roomsArray[room]];
+return (arr[variable]);
 
 
 
 }
 
 function pickMystery() {
-selectRandom(obj);
-console.log(obj[0]["firstName"]+obj[0]["firstName"]+ "killed Mr. Bod0dy using the"+ obj[1]["name"]+" in the"+ obj[2]["name"])
+  
+
+  let suspect=selectRandom(suspectsArray);
+  let weapon=selectRandom(weaponsArray);
+  let room=selectRandom(roomsArray);
+  
+ 
+      
+
+return({suspect,weapon, room})
 
  }
 
 
 // ITERATION 3
 
+function revealMystery(obj){
 
+let str1= "Victor Plum killed Mr. Boddy using the poison in the Billiard Room!"
+  let str= obj.suspect.firstName+" "+obj.suspect.lastName+" killed Mr. Boddy using the "+obj.weapon.name+" in the "+obj.room.name+"!"
+return str;
+  
+  
+  
+
+}
 
 
 // The following is required to make unit tests work.
